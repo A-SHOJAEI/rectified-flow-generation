@@ -121,7 +121,7 @@ Output (3×32×32) — zero-initialized final conv
 
 | 10K Steps | 50K Steps | 100K Steps | 300K Steps |
 |:---------:|:---------:|:----------:|:----------:|
-| <img src="output/cifar10_uniform/samples/samples_step0010000.png" width="180"> | <img src="output/cifar10_uniform/samples/samples_step0050000.png" width="180"> | <img src="output/cifar10_uniform/samples/samples_step0100000.png" width="180"> | <img src="output/cifar10_uniform/samples/samples_step0300000.png" width="180"> |
+| <img src="results/progression_10k.png" width="180"> | <img src="results/progression_50k.png" width="180"> | <img src="results/progression_100k.png" width="180"> | <img src="results/progression_300k.png" width="180"> |
 
 ## Evaluation
 

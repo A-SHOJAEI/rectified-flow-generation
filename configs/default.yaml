@@ -1,0 +1,43 @@
+# Rectified Flow Matching — CIFAR-10 Configuration
+
+model:
+  base_channels: 128
+  channel_mults: [1, 2, 2, 2]
+  num_res_blocks: 2
+  attn_resolutions: [16]
+  dropout: 0.13
+  num_heads: 4
+
+training:
+  total_steps: 300000
+  batch_size: 128
+  lr: 2.0e-4
+  betas: [0.9, 0.999]
+  weight_decay: 0.0
+  grad_clip: 1.0
+  warmup_steps: 5000
+  ema_decay: 0.9999
+  mixed_precision: true
+  log_interval: 500
+  sample_interval: 10000
+  save_interval: 50000
+  eval_interval: 50000
+
+flow:
+  time_distribution: "uniform"  # uniform, logit_normal, u_shaped
+
+sampling:
+  num_steps: 100
+  num_eval_samples: 50000
+  batch_size: 512
+
+data:
+  dataset: "cifar10"
+  image_size: 32
+  num_workers: 4
+
+reflow:
+  enabled: false
+  num_pairs: 500000
+  generation_steps: 50
+  batch_size: 256
